@@ -33,6 +33,14 @@ const EditProduct = () => {
             .catch(err => console.log(err))
     }
 
+    const handleDelete = (id) => {
+        axios.delete(`http://localhost:8000/api/products/${id}`)
+            .then(res => {
+                history.push("/")
+            })
+            .catch(err => console.log(err))
+    }
+
     return (
         <div>
             <div>
@@ -57,6 +65,7 @@ const EditProduct = () => {
                     </div>
                 </form>
             </div>
+            <button onClick={() => handleDelete(id)} className="btn btn-warning ">Delete</button>
         </div>
     )
 }

@@ -12,7 +12,7 @@ const DisplayList = (props) => {
             })
             .catch(err => console.log(err))
     }
-
+    
     return (
         <div className="bg-dark text-warning">
             <h1 className="d-flex justify-content-center">All Products</h1>
